@@ -1,0 +1,255 @@
+/* Font */
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Light.ttf");
+  font-weight: 300;
+}
+
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+strong {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  min-width: 768px;
+  max-width: 1200px;
+}
+
+.divider {
+  border-right: 1px solid rgb(220, 220, 220);
+  margin: 30px 0;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  margin-top: 4px;
+  border-top: 3px solid rgb(76, 90, 211);
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  padding: 10px 0;
+  margin: 0 20px;
+}
+
+nav a.active {
+  color: rgb(76, 90, 211);
+}
+
+/* Sidebar */
+section.sidebar {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+section.sidebar .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: rgb(65, 65, 65);
+}
+
+section.sidebar img {
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  margin-bottom: 10px;
+}
+
+section.sidebar h2,
+section.sidebar h3,
+section.sidebar h5 {
+  margin: 0;
+  padding: 2px 0;
+  font-weight: 400;
+}
+
+/* Main content */
+section.content {
+  padding: 40px;
+  flex: 2;
+}
+
+section.content h1 {
+  color: rgb(100, 100, 100);
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  border-top: 1px solid rgb(220, 220, 220);
+  padding: 16px 0;
+}
+
+footer .social-icon {
+  margin: 0;
+  text-decoration: none;
+}
+
+/* Index */
+.achievement-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievement-grid .achievement-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-item progress {
+  max-width: 80%;
+  width: 400px;
+  height: 20px;
+}
+
+/* Education / Experience */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 60px;
+  min-width: 400px;
+}
+
+.experience-container p,
+.experience-container strong {
+  margin: 0;
+}
+
+.experience-container .experience-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-container .experience-item .experience-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience-container .experience-item .experience-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.note {
+  font-size: 0.8em;
+  color: rgb(100, 100, 100);
+}
+
+/* Interests */
+ul.interests {
+  /* Use hyphens instead of dots */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.interests li::before {
+  content: "-";
+  padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .divider {
+    margin: 0;
+    border-right: none;
+    border-bottom: 1px solid rgb(220, 220, 220);
+  }
+
+  section.content {
+    padding: 20px;
+  }
+
+  section.content h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  section.sidebar {
+    justify-content: center;
+    flex: none;
+  }
+
+  section.sidebar img {
+    width: 180px;
+    height: 180px;
+  }
+
+  section.sidebar .info-container {
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .skills-container {
+    align-items: center;
+  }
+
+  .skill-item progress {
+    max-width: 100%;
+  }
+}
